@@ -1,0 +1,28 @@
+<div class="form-container">
+
+  <h1>Sign In</h1>
+
+  <p>Do not have an account yet? <a href="/signup">register</a></p>
+
+<%= form_tag('/login', :url => {:controller => 'sessions', :action => 'create'}) do%>
+    <fieldset class="form-group">
+      <%= label_tag :email, nil,  class: 'form-label' %>
+      <%= text_field_tag :email, nil,  class: 'form-text'%>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= label_tag :password, nil, class: 'form-label' %>
+      <%= password_field_tag :password, nil, class: 'form-text'%>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= submit_tag(:login, class: 'btn btn-primary') %>
+    </fieldset>
+<% end %>
+
+<% if @error %>
+    <p>Incorrect email or password,</p>
+    <p>you must have an account to log in,
+    <%= link_to 'register here', {controller: 'users', action: 'new'} %>
+    </p>
+<% end %>
+
+</div>

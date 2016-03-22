@@ -1,0 +1,16 @@
+
+<div class="form-container">
+
+  <h1>create a new post</h1>
+
+  <%= render 'form' %>
+
+  <% if @post.errors.any? %>
+      <ul class="signup-errors">
+        <% @post.errors.full_messages.each do |message_error|%>
+            <li class="signup-error">* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render 'pages/head' %>
+</head>
+<body>
+
+<div id="header">
+  <%= render 'pages/navBar' %>
+</div>
+
+<div class="content">
+  <%= render 'pages/flash' %>
+  <%= yield %>
+</div>
+
+<div id="footer">
+ <%= render 'pages/footer' %>
+</div>
+</body>
+</html>

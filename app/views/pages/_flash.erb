@@ -1,0 +1,23 @@
+<% if flash[:notice] %>
+    <div class="flash-message alert fade in
+      <% if flash[:type] &&  flash[:type] == 'success'%>
+        alert-success
+      <% elsif flash[:type] &&  flash[:type] == 'error'%>
+        alert-danger
+      <% else %>
+        alert-info
+      <% end %>
+    ">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+
+      <% if flash[:type] &&  flash[:type] == 'success'%>
+          <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+      <% elsif flash[:type] &&  flash[:type] == 'error'%>
+          <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+      <% else %>
+          <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+      <% end %>
+      <%= flash[:notice] %>
+    </div>
+<% end %>

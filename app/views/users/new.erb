@@ -1,0 +1,33 @@
+<div class="form-container">
+  <div class="Sign_Form">
+    <h1>Sign Up</h1>
+    <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+        <fieldset class="form-group">
+          <%= f.label(:username, class: 'form-label') %>
+          <%= f.text_field :username, class: 'form-text'%>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= f.label(:email, class: 'form-label') %>
+          <%= f.text_field :email, class: 'form-text'%>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= f.label(:password, class: 'form-label') %>
+          <%= f.password_field :password, class: 'form-text'%>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= f.label(:password_confirmation, class: 'form-label') %>
+          <%= f.password_field :password_confirmation, class: 'form-text'%>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= f.submit(:signup, class: 'btn btn-primary') %>
+        </fieldset>
+    <% end %>
+    <% if @user.errors.any? %>
+        <ul class="signup-errors">
+          <% @user.errors.full_messages.each do |message_error|%>
+              <li class="signup-error">* <%= message_error %></li>
+          <% end %>
+        </ul>
+    <% end %>
+  </div>
+</div>

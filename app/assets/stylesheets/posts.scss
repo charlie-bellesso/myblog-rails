@@ -1,0 +1,45 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-title:first-letter{
+  text-transform: uppercase;
+}
+
+.post-author{
+  margin: 10px 0px;
+  font-size: 16px;
+}
+
+.post-body{
+  line-height: 135%;
+  font-size: 18px;
+}
+
+.posts-container{
+  padding: 0px 15px;
+}
+
+.posts-container .post{
+  display: block;
+  margin: 20px 0px;
+}
+
+.posts-container .post .post-title{
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.edit-post-link, .delete-post-link{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  text-transform: none;
+}
+
+.delete-post-link{
+  color: #CD3333  !important;
+}
+
+.zero-posts{
+  font-size: 19px;
+}

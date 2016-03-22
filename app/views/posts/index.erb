@@ -1,0 +1,22 @@
+<h1>
+  Posts Index
+  <%= link_to 'create new post', {controller: 'posts', action: 'new'}, class: 'edit-post-link' %>
+</h1>
+
+<div class="posts-container">
+
+  <% unless @posts.exists? %>
+    <p class="zero-posts">Currently we have zero posts, go ahead and create the first one.</p>
+  <% end %>
+
+  <% @posts.each do |post| %>
+
+      <div class="post">
+        <p class="post-title"><%= link_to post.title, controller: 'posts', action: 'show', id: post.id %></p>
+        <p class="post-author">author: <%= post.user.username %></p>
+        <p class="post-body"><%= post.body %></p>
+      </div>
+
+  <% end %>
+
+</div>

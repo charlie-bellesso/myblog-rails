@@ -1,0 +1,10 @@
+<p>Leave a reply about this post</p>
+
+<%= form_for @comment, url: {:controller => 'comments', :action => 'create'}, html: {method: 'post'} do |f| %>
+    <fieldset class="form-group">
+      <%= f.text_area(:comment, class: 'form-textarea comment-textarea') %>
+    </fieldset>
+    <fieldset class="form-group">
+      <%= f.submit(class: 'btn btn-primary') %>
+    </fieldset>
+<% end %>

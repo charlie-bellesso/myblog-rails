@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require reset
+ *= require_tree .
+ *= require_self
+ */
+
+body, html{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1{
+    font-family: 'Poiret One', cursive;
+    font-size: 28px;
+    margin: 0px 0px 15px 0px;
+}
+
+a, a:hover, a:visited, a:hover, a:active{
+    cursor: pointer;
+    color: #008080;
+    text-decoration: none;
+}
+
+.content{
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.form-container{
+    margin: auto;
+    padding: 0px 10px;
+    max-width: 800px;
+}
+
+.form-group{
+    margin: 10px 0px;
+}
+
+.form-label{
+    display: block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.form-text, .form-textarea{
+    display: block;
+    width: 98%;
+    margin-left: 1%;
+    height: 30px;
+    padding: 2px 5px;
+}
+.form-textarea{
+    height: 160px;
+    line-height: 130%;
+}
+
+.btn{
+    border-radius: inherit;
+    margin-left: 1%;
+    font-size: 16px;
+}
+
+.flash-message{
+    margin-bottom: 30px;
+    padding: 5px 10px 8px 10px;
+    border-radius: inherit
+}
+
+.glyphicon{
+    margin-right: 5px;
+    top: 3px;
+}
